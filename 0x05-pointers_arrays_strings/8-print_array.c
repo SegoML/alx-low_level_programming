@@ -1,19 +1,24 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * main - check the code for
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    int array[5];
+* print_array - prints n element of array
+* @a: array
+* @n: number of elements
+* Return: nothing
+*/
 
-    array[0] = 98;
-    array[1] = 402;
-    array[2] = -198;
-    array[3] = 298;
-    array[4] = -1024;
-    print_array(array, 5);
-    return (0);
+void print_array(int *a, int n)
+{
+	int inc;
+
+	for (inc = 0; inc < n ; inc++)
+	{
+		if (inc != n - 1)
+			printf("%d, ", a[inc]);
+		else
+			printf("%d", a[inc]);
+
+	}
+	putchar(10);
 }
